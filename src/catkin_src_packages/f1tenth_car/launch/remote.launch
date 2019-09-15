@@ -1,0 +1,16 @@
+<launch>
+
+    <!-- Arguments & parameters -->
+
+    <!-- rviz -->
+    <node pkg="rviz" type="rviz" name="rviz"
+          args="-d $(find hector_slam_launch)/rviz_cfg/mapping_demo.rviz"/>
+
+    <!-- Remote bond -->
+    <node pkg="f1tenth_car" type="remote_bond.py" name="remote_bond" output="screen"/>
+
+    <!-- remote gui -->
+    <node pkg="f1tenth_car" type="remote_gui.py" name="remote_gui" output="screen"/>
+
+
+</launch>

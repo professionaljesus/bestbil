@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/git/GroupC/devel
+
+Name: f1tenth_car
+Description: Description of f1tenth_car
+Version: 1.0.0
+Cflags: -I/home/ubuntu/git/GroupC/devel/include
+Libs: -L/home/ubuntu/git/GroupC/devel/lib 
+Requires: 

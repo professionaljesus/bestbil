@@ -1,0 +1,8 @@
+<launch>
+
+    <!-- Arguments -->
+
+    <!-- kill.py node -->
+    <node pkg="f1tenth_car" type="kill.py" name="kill" output="screen"/>
+
+</launch>

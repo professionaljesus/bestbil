@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/git/GroupC/devel
+
+Name: car_2019
+Description: Description of car_2019
+Version: 0.0.0
+Cflags: -I/home/ubuntu/git/GroupC/devel/include
+Libs: -L/home/ubuntu/git/GroupC/devel/lib 
+Requires: message_runtime

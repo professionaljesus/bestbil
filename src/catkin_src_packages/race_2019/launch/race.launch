@@ -1,0 +1,20 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="lidar_ip" default="192.168.1.11"/>
+    <arg name="serial_device" default="/dev/ttyACM0"/>
+
+    <!-- LIDAR node -->
+    <node pkg="urg_node" type="urg_node" name="hokuyo" output="screen" args="_ip_address:=$(arg lidar_ip)"/>
+
+    <!-- Serial node -->
+    <node pkg="rosserial_python" type="serial_node.py" name="teensy_serial" output="screen" args="_port:=/dev/ttyACM0"/>
+    
+    
+    <!-- Controllers -->
+    <include file="$(find race_2019)/launch/start.launch"/>
+
+    <!-- hector_slam -->
+    <include file="$(find race_2019)/launch/hector_slam.launch"/>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find hector_slam_launch)/rviz_cfg/mapping_demo.rviz"/>
+</launch>

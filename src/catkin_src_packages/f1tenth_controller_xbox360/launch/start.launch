@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="f1tenth_controller_xbox360" type="xbox360_control.py" name="f1tenth_controller_xbox_360" output="screen"/>
+
+</launch>

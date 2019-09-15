@@ -1,0 +1,29 @@
+<launch>
+
+    <!-- Arguments -->
+    <arg name="lidar_ip" default="192.168.1.11"/>
+    <arg name="serial_device" default="/dev/ttyACM0"/>
+
+    <!-- LIDAR node -->
+    <node pkg="urg_node" type="urg_node" name="hokuyo" output="screen" args="_ip_address:=$(arg lidar_ip)"/>
+
+    <!-- Serial node -->
+    <node pkg="rosserial_python" type="serial_node.py" name="teensy_serial" output="screen" args="_port:=/dev/ttyACM0"/>
+
+    <!-- Mode switch -->
+    <node pkg="f1tenth_car" type="mode_switch.py" name="mode_switch" output="screen"/>
+
+    <!-- Translator -->
+    <node pkg="f1tenth_car" type="translator.py" name="translator" output="screen"/>
+
+    <!-- Jetson bond -->
+    <node pkg="f1tenth_car" type="jetson_bond.py" name="jetson_bond" output="screen"/>
+
+    <!-- Controllers -->
+    <include file="$(find f1tenth_controller_straight_path)/launch/start.launch"/>
+
+    <!-- hector_slam -->
+    <include file="$(find f1tenth_car)/launch/hector_slam.launch"/>
+
+
+</launch>
