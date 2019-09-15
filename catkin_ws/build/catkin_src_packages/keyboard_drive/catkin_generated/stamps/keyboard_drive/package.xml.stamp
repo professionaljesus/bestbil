@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>keyboard_drive</name>
+    <version>1.0.0</version>
+    <description>This package makes it possible to manually drive the f1/10 car using a keyboard.</description>
+    <maintainer email="elt14aan@student.lu.se">Albert Anderberg</maintainer>
+    <license>MIT</license>
+    <url type="repository">https://gitlab.control.lth.se/regler/FRTN40/2018/GroupC</url>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <build_depend>roscpp</build_depend>
+    <build_depend>rospy</build_depend>
+    <build_depend>f1tenth_car</build_depend>
+
+    <exec_depend>roscpp</exec_depend>
+    <exec_depend>rospy</exec_depend>
+    <exec_depend>f1tenth_car</exec_depend>
+
+</package>

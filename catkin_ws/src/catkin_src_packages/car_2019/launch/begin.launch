@@ -1,0 +1,10 @@
+<launch>
+        <node pkg="rosserial_python" type="serial_node.py" name="serial_node" output="screen" args="/dev/ttyACM0" />
+        <node pkg="urg_node" type="urg_node" name="urg_node" output="screen" args="_ip_address:=192.168.1.11" />
+	<node pkg="car_2019" type="dist_finder.py" name="dist_finder" output="screen" />
+	<node pkg="car_2019" type="control.py" name="control" output="screen" />
+	<node pkg="car_2019" type="translator.py" name="translator" output="screen" />
+        
+
+
+</launch>

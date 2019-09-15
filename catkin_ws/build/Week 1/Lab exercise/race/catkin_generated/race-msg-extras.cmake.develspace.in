@@ -1,0 +1,2 @@
+set(race_MESSAGE_FILES "/home/ubuntu/catkin_ws/src/Week 1/Lab exercise/race/msg/drive_param.msg;/home/ubuntu/catkin_ws/src/Week 1/Lab exercise/race/msg/drive_values.msg")
+set(race_SERVICE_FILES "")

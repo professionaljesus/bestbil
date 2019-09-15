@@ -1,0 +1,16 @@
+<launch>
+	<!-- Arguments -->
+        <arg name="lidar_ip" default="192.168.1.11"/>
+        <arg name="serial_device" default="/dev/ttyACM0"/>
+
+        <!-- LIDAR node -->
+        <node pkg="urg_node" type="urg_node" name="hokuyo" output="screen" args="_ip_address:=$(arg lidar_ip)"/>
+
+        <!-- Serial node -->
+        <node pkg="rosserial_python" type="serial_node.py" name="teensy_serial" output="screen" args="_port:=/dev/ttyACM0"/>
+
+
+	<node pkg="race_2019" type="control.py" name="control" output="screen" />
+	<node pkg="race_2019" type="dist_finder.py" name="dist_finder" output="screen" />
+	<node pkg="race_2019" type="translator.py" name="translator" output="screen" />
+</launch>

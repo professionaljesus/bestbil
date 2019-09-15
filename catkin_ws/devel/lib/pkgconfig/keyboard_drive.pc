@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/devel
+
+Name: keyboard_drive
+Description: Description of keyboard_drive
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/ubuntu/catkin_ws/devel/lib 
+Requires: roscpp rospy f1tenth_car

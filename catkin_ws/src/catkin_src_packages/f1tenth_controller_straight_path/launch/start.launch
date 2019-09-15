@@ -1,0 +1,6 @@
+<launch>
+
+    <node pkg="f1tenth_controller_straight_path" type="control.py" name="f1tenth_controller_straight_path_control" output="screen"/>
+    <node pkg="f1tenth_controller_straight_path" type="dist_finder.py" name="f1tenth_controller_straight_path_distance_finder" output="screen"/>
+
+</launch>

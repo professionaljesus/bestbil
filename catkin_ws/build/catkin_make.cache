@@ -1,0 +1,2 @@
+catkin_src_packages/car_2019:catkin_src_packages/f1tenth_car:catkin_src_packages/f1tenth_controller_keyboard:catkin_src_packages/f1tenth_controller_straight_path:catkin_src_packages/f1tenth_controller_xbox360:catkin_src_packages/race_2019:catkin_src_packages/teleop:particle_filter
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/catkin_ws/install -G Unix Makefiles
